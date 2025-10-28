@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Dự Án: Quản Lý Thư Viện</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Tùy chỉnh CSS cho trang chi tiết, nếu cần */
+        .project-detail-container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: var(--editor-color);
+            border: 1px solid #333;
+            font-family: var(--font-code);
+        }
+        .detail-card h3 {
+            color: var(--secondary-color);
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+        .technology-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+        }
+        .technology-list li {
+            background-color: #3e3e3e;
+            color: var(--primary-color);
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .back-link:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body class="detail-page">
+    <div class="project-detail-container">
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Quay lại CV</a>
+        
+        <h1 style="color: var(--primary-color);"><i class="fas fa-book-open"></i> Chi Tiết Dự Án: Hệ thống Quản lý Thư viện</h1>
+        
+        <div class="detail-card">
+            <h3>Tổng quan</h3>
+            <p>Dự án Full-Stack nhằm tự động hóa quy trình quản lý tại thư viện. Mục tiêu là cung cấp một nền tảng thân thiện, hiệu quả cho cả người dùng (tra cứu sách) và quản trị viên (quản lý kho và độc giả).</p>
+        </div>
+
+        <div class="detail-card">
+            <h3>Vai trò cá nhân</h3>
+            <p><strong><span style="color: var(--secondary-color);">const</span> Role =</strong> <span style="color: var(--accent-color);">'Full-Stack Developer'</span>;</p>
+            <ul style="color: var(--text-color);">
+                <li>Thiết kế wireframe và mockup giao diện.</li>
+                <li>Phát triển Front-end (HTML, CSS, JavaScript) cho các trang Tra cứu và Dashboard.</li>
+                <li>Thiết kế và triển khai CSDL (MySQL).</li>
+                <li>Lập trình Back-end (PHP) để xử lý logic kinh doanh, API mượn/trả.</li>
+                <li>Kiểm thử tích hợp hệ thống.</li>
+            </ul>
+        </div>
+        
+        <div class="detail-card">
+            <h3>Chức năng chính</h3>
+            <p style="color: var(--comment-color);">// Các modules đã được phát triển:</p>
+            <ul>
+                <li>Đăng nhập/đăng ký với mã hóa mật khẩu.</li>
+                <li>Tra cứu sách nâng cao (tìm kiếm theo từ khóa, lọc theo thể loại, tác giả).</li>
+                <li>Quản lý danh mục sách (CRUD).</li>
+                <li>Quản lý mượn/trả sách, hiển thị thông báo quá hạn.</li>
+                <li>Phân quyền người dùng (Admin, Thủ thư, Độc giả).</li>
+            </ul>
+        </div>
+        
+        <div class="detail-card">
+            <h3>Công nghệ sử dụng</h3>
+            <ul class="technology-list">
+                <li><i class="fab fa-html5"></i> HTML5</li>
+                <li><i class="fab fa-css3-alt"></i> CSS3</li>
+                <li><i class="fab fa-js"></i> JavaScript</li>
+                <li><i class="fab fa-php"></i> PHP (Back-end Logic)</li>
+                <li><i class="fas fa-database"></i> MySQL (Database)</li>
+                <li><i class="fas fa-server"></i> Deployment (XAMPP/Localhost)</li>
+            </ul>
+        </div>
+
+        <div class="detail-card" style="text-align: center; border: none;">
+            <a href="https://github.com/neerajcodes888/Library-Management-System" class="project-link" target="_blank" style="margin-right: 15px;"><i class="fab fa-github"></i> Xem Mã Nguồn</a>
+            <a href="http://ourlms2024.great-site.net/" class="project-link" target="_blank"><i class="fas fa-rocket"></i> Xem Demo Trực Tiếp</a>
+        </div>
+    </div>
+</body>
+</html>

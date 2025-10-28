@@ -1,0 +1,414 @@
+/* Màu sắc và font */
+:root {
+    --primary-color: #0077b6; /* Xanh dương đậm (chủ đạo) */
+    --secondary-color: #00b4d8; /* Xanh dương nhạt (nhấn) */
+    --accent-color: #90e0ef; /* Màu sáng */
+    --background-light: #f8f9fa; /* Nền sáng */
+    --background-dark: #212529; /* Nền footer */
+    --card-background: #ffffff;
+    --text-color: #343a40;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    color: var(--text-color);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* ================== YÊU CẦU 1: HEADER & NAVBAR ================== */
+
+.main-header {
+    background-color: var(--background-dark);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.logo {
+    color: var(--secondary-color);
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+    background-color: var(--accent-color);
+}
+
+.download-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.download-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px); /* Animation nhấn nút */
+}
+
+/* ================== YÊU CẦU 2: LAYOUT CHÍNH (GRID) ================== */
+
+.container {
+    display: grid;
+    /* Layout 2 cột: 1/3 cho Profile và 2/3 cho Details */
+    grid-template-columns: 1fr 2fr; 
+    gap: 30px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+/* Style chung cho card (tạo UI/UX tốt hơn) */
+.card {
+    background-color: var(--card-background);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-bottom: 25px;
+    border-top: 5px solid var(--primary-color);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.icon-primary {
+    color: var(--secondary-color);
+    margin-right: 8px;
+}
+
+/* ================== THÔNG TIN CÁ NHÂN & MẠNG XÃ HỘI ================== */
+
+.profile-picture img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px auto 20px;
+    display: block;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 0 0 8px var(--accent-color);
+}
+
+.profile-card h1 {
+    text-align: center;
+    margin: 5px 0;
+    color: var(--background-dark);
+}
+
+.job-title {
+    text-align: center;
+    color: var(--secondary-color);
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px dashed #ccc;
+    padding-top: 15px;
+}
+
+.social-links a {
+    color: var(--primary-color);
+    font-size: 1.8em;
+    margin: 0 10px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--secondary-color);
+    transform: scale(1.1); /* Animation hover */
+}
+
+/* ================== KỸ NĂNG (PROGRESS BARS) ================== */
+
+.skill-item {
+    margin-bottom: 15px;
+}
+
+.skill-item label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.progress-bar-container {
+    background-color: #e9ecef;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 25px;
+    line-height: 25px;
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: right;
+    padding-right: 10px;
+    border-radius: 5px;
+    transition: width 1s ease-out; /* Animation load */
+}
+
+.soft-skills li {
+    list-style: none;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+.soft-skills .fa-check-circle {
+    color: var(--secondary-color);
+    margin-right: 5px;
+}
+
+/* ================== SỞ THÍCH ================== */
+.hobbies-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.hobbies-list span {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.hobbies-list span:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* ================== THƯ VIỆN HÌNH ẢNH (GALLERY) ================== */
+.image-grid {
+    display: grid;
+    /* Layout Grid 2x2 */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation Hover cho ảnh */
+.animation-image-hover:hover {
+    transform: scale(1.05);
+    z-index: 10;
+    transition: transform 0.3s ease;
+}
+
+/* ================== DỰ ÁN ================== */
+.project-item {
+    border-left: 5px solid var(--secondary-color);
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+.project-item h3 {
+    margin-top: 0;
+    color: var(--background-dark);
+}
+
+.project-tech {
+    color: #6c757d;
+    font-size: 0.9em;
+}
+
+.project-link {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.project-link:hover {
+    background-color: var(--secondary-color);
+}
+
+/* ================== YÊU CẦU 1: FOOTER (LIÊN HỆ) ================== */
+
+.main-footer {
+    background-color: var(--background-dark);
+    color: white;
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+.footer-content h2 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.contact-links a {
+    color: var(--accent-color);
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.contact-links a:hover {
+    color: white;
+}
+
+.copyright {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #444;
+    font-size: 0.9em;
+}
+
+/* ================== YÊU CẦU 2: RESPONSIVE ================== */
+
+/* Tablet & Điện thoại (Màn hình dưới 992px) */
+@media (max-width: 992px) {
+    .container {
+        /* Chuyển sang 1 cột duy nhất */
+        grid-template-columns: 1fr; 
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .nav-links li {
+        margin: 0 5px;
+    }
+
+    .download-btn {
+        margin-top: 10px;
+        width: 80%; /* Nút download rộng hơn */
+        max-width: 300px;
+    }
+}
+
+/* Điện thoại (Màn hình dưới 576px) */
+@media (max-width: 576px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .nav-links {
+        /* Chuyển Navbar thành các liên kết block */
+        flex-direction: column;
+    }
+    .nav-links li {
+        margin: 5px 0;
+    }
+    
+    .image-grid {
+        /* Chuyển ảnh thành 1 cột trên điện thoại nhỏ */
+        grid-template-columns: 1fr; 
+    }
+
+    .hobbies-list {
+        justify-content: center;
+    }
+}
+
+/* ================== YÊU CẦU 2: ANIMATION CSS KEYFRAMES ================== */
+
+/* Animation chung: Fade In */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animation Slide In (Áp dụng cho các card chi tiết) */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Áp dụng Animation (chú ý: cần JavaScript để kích hoạt khi cuộn) */
+.animation-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+    opacity: 0; /* Ẩn ban đầu */
+}
+
+.animation-slide-in {
+    animation: slideIn 0.8s ease-out forwards;
+    opacity: 0; /* Ẩn ban đầu */
+}
+/* --- Bổ sung vào style.css để Animation On-Scroll hoạt động --- */
+/* Class base để ẩn ban đầu */
+.animation-fade-in, .animation-slide-in {
+    opacity: 0; 
+}
+
+/* Kích hoạt Animation khi class is-visible được thêm vào */
+.animation-fade-in.is-visible {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animation-slide-in.is-visible {
+    animation: slideIn 0.8s ease-out forwards;
+}

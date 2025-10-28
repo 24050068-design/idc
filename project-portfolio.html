@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Dự Án: Website Cá Nhân</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Tùy chỉnh CSS cho trang chi tiết, giữ lại style từ project-library.html */
+        .project-detail-container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: var(--editor-color);
+            border: 1px solid #333;
+            font-family: var(--font-code);
+        }
+        .detail-card h3 {
+            color: var(--secondary-color);
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+        .technology-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+            padding: 0;
+        }
+        .technology-list li {
+            background-color: #3e3e3e;
+            color: var(--primary-color);
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .back-link:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body class="detail-page">
+    <div class="project-detail-container">
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Quay lại CV</a>
+        
+        <h1 style="color: var(--primary-color);"><i class="fas fa-id-card-alt"></i> Chi Tiết Dự Án: Website Cá Nhân (Portfolio)</h1>
+        
+        <div class="detail-card">
+            <h3>Tổng quan</h3>
+            <p>Dự án này là một trang web tĩnh (Portfolio) nhằm mục đích giới thiệu hồ sơ nghề nghiệp cá nhân, bao gồm các phần: Giới thiệu, Kỹ năng, Dự án, và Liên hệ. Mục tiêu chính là trình bày năng lực lập trình Front-end và gu thẩm mỹ thiết kế.</p>
+        </div>
+
+        <div class="detail-card">
+            <h3>Vai trò cá nhân</h3>
+            <p><strong><span style="color: var(--secondary-color);">const</span> Role =</strong> <span style="color: var(--accent-color);">'Front-End Developer / UI Designer'</span>;</p>
+            <ul style="color: var(--text-color);">
+                <li>Thiết kế bố cục giao diện và phối màu để tạo dấu ấn cá nhân.</li>
+                <li>Sử dụng CSS để tạo các hiệu ứng chuyển động và Animation.</li>
+                <li>Đảm bảo tính Responsive, tối ưu hiển thị trên mọi thiết bị (điện thoại, tablet, desktop).</li>
+                <li>Tối ưu hóa hiệu suất tải trang cho trải nghiệm người dùng tốt nhất.</li>
+            </ul>
+        </div>
+        
+        <div class="detail-card">
+            <h3>Cấu trúc trang</h3>
+            <p style="color: var(--comment-color);">// Các modules chính:</p>
+            <ul>
+                <li>Phần Giới thiệu (Hero Section).</li>
+                <li>Danh sách Kỹ năng (có Progress Bar/Biểu đồ).</li>
+                <li>Thư viện Dự án (Gallery).</li>
+                <li>Form/Thông tin Liên hệ.</li>
+            </ul>
+        </div>
+        
+        <div class="detail-card">
+            <h3>Công nghệ sử dụng</h3>
+            <ul class="technology-list">
+                <li><i class="fab fa-html5"></i> HTML5 (Cấu trúc)</li>
+                <li><i class="fab fa-css3-alt"></i> CSS3 (Bố cục Flexbox/Grid, Animation)</li>
+                <li><i class="fab fa-js"></i> JavaScript (Tương tác nhỏ)</li>
+            </ul>
+        </div>
+
+        <div class="detail-card" style="text-align: center; border: none;">
+            <a href="https://github.com/marium-noor/MyPersonalPortfolio" class="project-link" target="_blank" style="margin-right: 15px;"><i class="fab fa-github"></i> Xem Mã Nguồn</a>
+            <a href="https://marium-noor.github.io/MyPersonalPortfolio/" class="project-link" target="_blank"><i class="fas fa-rocket"></i> Xem Demo Trực Tiếp</a>
+        </div>
+    </div>
+</body>
+</html>
